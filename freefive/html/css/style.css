@@ -1,0 +1,169 @@
+*:focus {
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  user-select: none;
+}
+
+.window {
+  background: #2A3040;
+  margin: 10px;
+  display: inline-block;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s;
+  z-index: 2;
+}
+.window.active {
+  visibility: visible;
+  opacity: 1;
+}
+.header {
+  background: #222534;
+  border-bottom: 1px solid #444756;
+  text-align: center;
+}
+.header h1 {
+  margin: 0;
+  padding: 20px 70px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+.section h2 {
+  color: #B5BBCB;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 10px 20px;
+}
+.section h2 i {
+  width: 20px;
+  display: inline-block;
+}
+.section a {
+  display: block;
+  background: rgba(0,0,0,.05);
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-top: 2px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 14px;
+  transition: all .4s;
+} 
+.section a:hover {
+  background: #222534;
+}
+.section a.active {
+  background: #222534;
+  color: #68cc82;
+}
+.section.veh_actions {
+  display: none;
+}
+
+@keyframes exwindow {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+}
+
+.exwindow {
+  display: inline-block;
+  visibility: hidden;
+  position: absolute;
+  background: #2A3040;
+  margin: 10px;
+  left: 318.5px;
+  border-left: 1px solid #444756;
+  opacity: 0;
+  transition: all .4s;
+  width: 355px;
+}
+.exwindow.opened {
+  visibility: visible;
+  opacity: 1;
+}
+.exwindow .header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  padding: 31px 100px;
+  color: rgba(255,255,255,.8)
+}
+.exwindow .section {
+  height: 438px;
+  overflow: auto;
+}
+.exwindow .section::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+.exwindow .section::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.exwindow .section::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+}
+.exwindow .section::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+.exwindow .section::-webkit-scrollbar-thumb:active {
+  background: #ffffff;
+}
+.exwindow .section::-webkit-scrollbar-track {
+  background: #2A3040;
+  border: 0px none #ffffff;
+}
+.exwindow .section::-webkit-scrollbar-track:hover {
+  background: #2A3040;
+}
+.exwindow .section::-webkit-scrollbar-track:active {
+  background: #2A3040;
+}
+.exwindow .section::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.exwindow .search {
+  padding: 10px 20px;
+  border-bottom: 1px solid #444756;
+}
+.exwindow .search i {
+  color: #B5BBCB;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.exwindow .search input {
+  border: none;
+  background: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #B5BBCB;
+  font-weight: 500;
+}
+.exwindow .search input::-webkit-input-placeholder {
+  color: #B5BBCB;
+  transition: all .2s;
+}
+.exwindow .search input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}

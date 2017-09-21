@@ -1,0 +1,8 @@
+type: lua
+files:
+  - html/index.html
+  - html/css/style.css
+  - html/js/index.js
+  - html/js/vehicles.json
+  - html/js/weapons.json
+  - html/js/skins.json
