@@ -46,10 +46,12 @@ $('#respawn').click(function(){
 	TriggerEvent('respawn');
 });
 //spawn vehicles
-$('.avehicle').click(function(){
-	var veh = $(this).attr('data-veh');
-	console.log('CEFLOG:' + veh);
-	TriggerEvent('spawnveh', veh);
+$(document).ready(function(){
+	$('.avehicle').click(function(){
+		var veh = $(this).attr('data-veh');
+		console.log('CEFLOG:' + veh);
+		TriggerEvent('spawnveh', veh);
+	});
 });
 
 // loading contents
