@@ -46,8 +46,9 @@ $('#respawn').click(function(){
 	TriggerEvent('respawn');
 });
 //spawn vehicles
-$('#vehicles a').click(function(){
+$('.avehicle').click(function(){
 	var veh = $(this).attr('data-veh');
+	console.log('CEFLOG:' + veh);
 	TriggerEvent('spawnveh', veh);
 });
 
@@ -59,7 +60,7 @@ $.getJSON('js/vehicles.json', function (data) {
   $.each(data, function (key, val) {
     items += '<h2>' + key + '</h2>';
     $.each(val, function(vKey, vVal) {
-      items += '<a href="#" data-veh="' + vVal + '">' + vVal + '</a>';
+      items += '<a href="#" class="avehicle" data-veh="' + vVal + '">' + vVal + '</a>';
     });
   });
   $('<div/>', {
@@ -73,7 +74,7 @@ $.getJSON('js/weapons.json', function (data) {
   $.each(data, function (key, val) {
     items += '<h2>' + key + '</h2>';
     $.each(val, function(vKey, vVal ) {
-      items += '<a href="#" data-weapon="' + vVal.hash + '">' + vVal.name + '</a>';
+      items += '<a href="#" class="aweapon" data-weapon="' + vVal.hash + '">' + vVal.name + '</a>';
     });
   });
   $('<div/>', {
@@ -86,7 +87,7 @@ $.getJSON('js/skins.json', function (data) {
   var items = '';
   $.each(data, function (key, val) {
     $.each(val, function(vKey, vVal) {
-      items += '<a href="#" data-skin="' + vVal + '">' + vVal + '</a>';
+      items += '<a href="#" class="askin" data-skin="' + vVal + '">' + vVal + '</a>';
     });
   });
   $('<div/>', {
