@@ -14,7 +14,7 @@ Player:On('spawnveh', function(p, veh)
 	print(veh)
 	local x, y, z = p:getPosition()
 	local h = p:getHeading()
-	Vehicle:Create(veh, x, y, z, h)
+	Vehicle:Create(veh, p.x+2, p.y+2, p.z+2, h)
 end)
 
 
